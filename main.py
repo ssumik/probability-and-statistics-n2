@@ -15,12 +15,7 @@ except FileNotFoundError:
 except pandas.errors.ParserError:
     print("Erro ao fazer o parse do CSV.")
     sys.exit(1)
-except Exception as e:
-    print(f"Erro inesperado: {e}")
-    sys.exit(1)
 
-print(csv_data)
-"""
 x = csv_data[['Hours Studied', 'Previous Scores','Extracurricular Activities','Sleep Hours','Sample Question Papers Practiced']]
 y = csv_data['Performance Index']
 
@@ -30,4 +25,5 @@ linear_regretion.fit(x, y)
 predictedPerformance = linear_regretion.predict(x)
 coeficient = linear_regretion.coef_
 
-print(coeficient)"""
+print("Coeficientes:", coeficient)
+print("Resultados previstos:S\n", predictedPerformance)
